@@ -30,6 +30,7 @@ function createPostElement(postHeading, postContent, timestamp) {
     savePostBtn.setAttribute("data-post-id", postElement.id);
     document.getElementById("popup-header").textContent = "Edit a post";
     document.getElementById("save-post-btn").textContent = "Save Post";
+    cancelPostBtn.textContent = "Delete Post";
    
 
   });
@@ -60,7 +61,7 @@ createPostBtn.addEventListener("click", () => {
   // Show the popup when the button is clicked
   showPopup();
   document.getElementById("popup-header").textContent = "Create a post";
-
+  cancelPostBtn.textContent = "Cancel";
  
 });
 
@@ -78,6 +79,7 @@ savePostBtn.addEventListener("click", () => {
     postHeadingElement.textContent = postHeading;
     postContentElement.textContent = postContent;
     postElement.querySelector(".post-timestamp").textContent = `Last Edited at ${timestamp}`;
+    
    
     
 

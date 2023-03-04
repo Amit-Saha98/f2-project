@@ -125,6 +125,7 @@ header{
 
  
   .post-timestamp{
+    display: block  ;
     float: right;
     margin-right: 20px;
     color: gray;
@@ -147,6 +148,63 @@ header{
 
 #posts-container h3, #posts-container p {
     word-wrap: break-word;
+  }
+
+   
+  @media screen and (max-width: 800px) {
+    body {
+      font-size: 14px;
+    }
+    .header {
+      padding: 10px;
+      font-size: 20px;
+    }
+    .pg{
+      width: auto ;
+    }
+
+    #popup{
+      width: 300px;
+    }
+
+    /*#posts-container{
+      max-width: 100%;
+    }
+    
+    #posts-container div{
+      height: auto;
+  }
+
+    .post-timestamp{
+      float:left;
+      font-size: 12px;
+    }*/
+
+    #posts-container {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 10px; /* add some padding to the sides */
+    }
+  
+    #posts-container div {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 5px; /* add some padding to the posts */
+      margin-bottom: 1  0px;
+    }
+
+    #posts-container button{
+      margin-left: 7px;
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
+  
+    .post-timestamp {
+      float: none;
+      margin: 5px 7px; /* add some margin to separate the timestamp from the post */
+      text-align: left;
+      font-size: 10px;
+    }
   }
   
   
