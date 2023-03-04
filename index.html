@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pg">
+        <header>
+            <div><h2>Blogging Website</h2></div>
+            <button id="create-post-btn">Create a blog</button>
+        </header>
+        
+            <div id="posts-container">
+            <!-- existing posts go here -->
+            </div>
+        
+        
+            <div id="overlay">
+            <div id="popup">
+                <h2 id="popup-header">Create a Post
+                </h2>
+                
+                <label for="post-heading-input">Title:</label>
+                <input type="text" id="post-heading-input" placeholder="Enter your Heading....">
+                <label for="post-content-input">Content:</label>
+                <textarea id="post-content-input" placeholder="Enter your Blog Post...." rows="5" cols="12"></textarea>
+                <button id="save-post-btn">Publish Post</button>
+                <button id="cancel-post-btn">Cancel Post</button>
+            </div>
+            </div>
+    </div>
+      
+      
+    <script src="script.js"></script>
+</body>
+</html>
