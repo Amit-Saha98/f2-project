@@ -5,6 +5,8 @@ const postHeadingInput = document.getElementById("post-heading-input");
 const postContentInput = document.getElementById("post-content-input");
 const savePostBtn = document.getElementById("save-post-btn");
 const postsContainer = document.getElementById("posts-container");
+const cancelPostBtn = document.getElementById("cancel-post-btn");
+crossPostBtn = document.getElementById("cross-post-btn");
 
 // Function to create a new post element
 function createPostElement(postHeading, postContent, timestamp) {
@@ -19,6 +21,7 @@ function createPostElement(postHeading, postContent, timestamp) {
   timestampElement.textContent = timestamp;
   editBtn.textContent = "Edit Post";
   deleteBtn.textContent = "Delete Post";
+  deleteBtn.classList="dbtn"
   editBtn.addEventListener("click", () => {
     // Show the popup and fill in the input fields with the current values
     showPopup();
@@ -27,6 +30,7 @@ function createPostElement(postHeading, postContent, timestamp) {
     savePostBtn.setAttribute("data-post-id", postElement.id);
     document.getElementById("popup-header").textContent = "Edit a post";
     document.getElementById("save-post-btn").textContent = "Save Post";
+   
 
   });
   deleteBtn.addEventListener("click", () => {
@@ -55,6 +59,9 @@ function hidePopup() {
 createPostBtn.addEventListener("click", () => {
   // Show the popup when the button is clicked
   showPopup();
+  document.getElementById("popup-header").textContent = "Create a post";
+
+ 
 });
 
 savePostBtn.addEventListener("click", () => {
@@ -71,6 +78,9 @@ savePostBtn.addEventListener("click", () => {
     postHeadingElement.textContent = postHeading;
     postContentElement.textContent = postContent;
     postElement.querySelector(".post-timestamp").textContent = `Last Edited at ${timestamp}`;
+   
+    
+
   } else {
     // Create a new post
     const postHeading = postHeadingInput.value;
@@ -81,6 +91,7 @@ savePostBtn.addEventListener("click", () => {
     timestampElement.className = "post-timestamp";
     timestampElement.textContent = `Created at ${timestamp}`;
     postElement.appendChild(timestampElement);
+    
   }
 
   // Hide the popup and reset the input values
@@ -90,13 +101,23 @@ savePostBtn.addEventListener("click", () => {
   savePostBtn.removeAttribute("data-post-id");
 });
 
-const cancelPostBtn = document.getElementById("cancel-post-btn");
+
+
+
+
 
 cancelPostBtn.addEventListener("click", () => {
-  // Hide the popup and reset the input values
-  popup.style.display = "none";
-  overlay.style.display = "none";
-  postHeadingInput.value = "";
-  postContentInput.value = "";
-  savePostBtn.removeAttribute("data-post-id");
-});
+    // Hide the popup and reset the input values
+    popup.style.display = "none";
+    overlay.style.display = "none";
+  });
+
+crossPostBtn.addEventListener("click", () => {
+    // Hide the popup and reset the input values
+    popup.style.display = "none";
+    overlay.style.display = "none";
+    postHeadingInput.value = "";
+    postContentInput.value = "";
+    savePostBtn.removeAttribute("data-post-id");
+  });
+

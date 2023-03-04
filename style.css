@@ -24,6 +24,7 @@ header{
     border: 1px solid white;
     max-height: 30px;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 #posts-container div{
@@ -38,6 +39,7 @@ header{
     border: 1px solid white;
     margin-left: 20px;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .blog{
@@ -63,10 +65,9 @@ header{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
+    width: 600px;
     background-color: #fff;
     padding: 20px;
-    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   
@@ -83,7 +84,6 @@ header{
   #popup textarea {
     width: 100%;
     padding: 5px;
-    border-radius: 5px;
     border: 1px solid #ccc;
     box-sizing: border-box;
     margin-bottom: 10px;
@@ -125,9 +125,28 @@ header{
 
  
   .post-timestamp{
-    margin-left: 20px;
+    float: right;
+    margin-right: 20px;
     color: gray;
   }
 
+  .mg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#popup-header {
+    flex: 1;
+}
+
+.close {
+    margin-left: 10px; /* add margin to the left of the button */
+
+}
+
+#posts-container h3, #posts-container p {
+    word-wrap: break-word;
+  }
   
   
